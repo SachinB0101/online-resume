@@ -1,13 +1,13 @@
 // Sample data - Replace with your actual information
 const resumeData = {
     personalInfo: {
-        name: "John Doe",
+        name: "Sachin Bhatt",
         title: "Senior Software Engineer",
         headshot: "headshot.jpg",
         contact: {
-            email: "john.doe@example.com",
-            phone: "(555) 123-4567",
-            location: "San Francisco, CA",
+            email: "sachin1214bhatt@gmail.com",
+            phone: "(204) 951-7612",
+            location: "Winnipeg, Manitoba",
             linkedIn: "linkedin.com/in/johndoe"
         }
     },
