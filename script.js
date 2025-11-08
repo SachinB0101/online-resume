@@ -5,10 +5,11 @@ const resumeData = {
         title: "Senior Software Engineer",
         headshot: "headshot.jpg",
         contact: {
-            email: "sachin1214bhatt@gmail.com",
+            email: "sachin.bhatt0101@gmail.com",
             phone: "(204) 951-7612",
             location: "Winnipeg, Manitoba",
-            linkedIn: "linkedin.com/in/johndoe"
+            linkedIn: "linkedin.com/in/sachin-bhatt-5333b7217",
+            github: "github.com/SachinB0101"
         }
     },
     employment: [
@@ -28,6 +29,39 @@ const resumeData = {
             ]
         }
     ],
+    projects: [
+        {
+            id: 1,
+            title: "Note Management Website (Full Stack)",
+            description: "A secure full-stack note management platform with user authentication, enabling users to store and retrieve notes efficiently.",
+            technologies: ["React", "Node.js", "MongoDB Atlas"],
+            features: [
+            "Developed a full-stack note management application with user authentication and authorization.",
+            "Built a responsive React.js front-end for an improved and dynamic user experience.",
+            "Implemented RESTful APIs in Node.js for backend functionality.",
+            "Integrated MongoDB Atlas for scalable and cloud-based data storage."
+            ],
+            githubUrl: "https://github.com/SachinB0101/keeperApp",
+            liveUrl: "",
+            date: "2024"
+        },
+        {
+            id: 2,
+            title: "Task Management App (Android)",
+            description: "An Android application to manage daily tasks with add, edit, and completion features using modern Android components.",
+            technologies: ["Kotlin", "Room Database", "SharedPreferences", "XML (Android Layouts)"],
+            features: [
+            "Designed and implemented a task management app with task creation, editing, and completion tracking.",
+            "Integrated Room Database for persistent local data storage.",
+            "Used SharedPreferences for efficient user data handling and preferences.",
+            "Created intuitive XML-based layouts leveraging Android’s modern UI components."
+            ],
+            githubUrl: "",
+            liveUrl: "",
+            date: "2024"
+        }
+    ],
+
     education: [
         {
         degree: "Bachelor of Science in Computer Science",
@@ -60,16 +94,17 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeResume() {
     // Set personal information
     document.getElementById('name').textContent = resumeData.personalInfo.name;
-    document.getElementById('title').textContent = resumeData.personalInfo.title;
+    // document.getElementById('title').textContent = resumeData.personalInfo.title;
+    document.getElementById('email').textContent = resumeData.personalInfo.contact.email
+    document.getElementById('phone').textContent = resumeData.personalInfo.contact.phone
     document.getElementById('headshot').src = resumeData.personalInfo.headshot;
     
     // Set contact information
     const contactInfo = resumeData.personalInfo.contact;
     document.getElementById('contactInfo').innerHTML = `
-        <p>Email: ${contactInfo.email}</p>
-        <p>Phone: ${contactInfo.phone}</p>
         <p>Location: ${contactInfo.location}</p>
         <p>LinkedIn: ${contactInfo.linkedIn}</p>
+        <p>Github: ${contactInfo.github}</p>
     `;
     
     // Populate employment timeline
@@ -77,6 +112,9 @@ function initializeResume() {
     
     // Populate education
     populateEducation();
+
+    // Populate projects
+    populateProjects();
     
     // Populate skills
     populateSkills();
@@ -122,6 +160,37 @@ function populateEducation() {
         `;
         
         educationList.appendChild(educationItem);
+    });
+}
+
+// Add this new function for projects
+function populateProjects() {
+    const projectList = document.getElementById('projectList');
+    
+    resumeData.projects.forEach(project => {
+        const projectItem = document.createElement('div');
+        projectItem.className = 'project-item';
+        
+        projectItem.innerHTML = `
+            <h3>${project.title}</h3>
+            <div class="project-date">${project.date}</div>
+            <p class="project-description">${project.description}</p>
+            
+            <div class="project-technologies">
+                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+            </div>
+            
+            <ul class="project-features">
+                ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+            </ul>
+            
+            <div class="project-links">
+                ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="project-link">GitHub</a>` : ''}
+                ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="project-link">Live Demo</a>` : ''}
+            </div>
+        `;
+        
+        projectList.appendChild(projectItem);
     });
 }
 

@@ -175,11 +175,17 @@ body {
     margin-bottom: 15px;
     border-radius: 10px;
     border-left: 4px solid #48bb78;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education-item h3 {
     color: #2d3748;
     margin-bottom: 5px;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .education-item .institution {
@@ -191,6 +197,84 @@ body {
 .education-item .date {
     color: #718096;
     font-style: italic;
+}
+
+/* Project Styles */
+.project-list {
+    display: grid;
+    gap: 20px;
+}
+
+.project-item {
+    background: #f7fafc;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #ed8936;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.project-item h3 {
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tech-tag {
+    background: #ed8936;
+    color: white;
+    padding: 3px 12px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #5a67d8;
+    text-decoration: underline;
+}
+
+.project-description {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-features {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.project-features li {
+    margin-bottom: 8px;
+    color: #718096;
 }
 
 /* Skills Styles */
@@ -261,20 +345,4 @@ body {
         display: inline-block;
         margin-bottom: 10px;
     }
-}
-
-/* Animation for interactive elements */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.timeline-item, .education-item, .skill-category {
-    animation: fadeIn 0.6s ease;
 }
