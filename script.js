@@ -14,57 +14,34 @@ const resumeData = {
     employment: [
         {
             id: 1,
-            position: "Senior Software Engineer",
-            company: "Tech Innovations Inc.",
-            date: "2020 - Present",
-            description: "Lead development of enterprise-scale web applications",
+            position: "Teaching & Support Assistant",
+            company: "University of Manitoba",
+            date: "May 2024 – August 2024",
+            location: "Winnipeg, MB (Hybrid)",
+            description: "Supported and mentored students in programming and software development.",
             details: [
-                "Led a team of 5 developers in building scalable microservices architecture",
-                "Reduced application load time by 40% through performance optimization",
-                "Implemented CI/CD pipelines reducing deployment time by 60%",
-                "Mentored junior developers and conducted code reviews"
-            ]
-        },
-        {
-            id: 2,
-            position: "Software Engineer",
-            company: "Digital Solutions LLC",
-            date: "2017 - 2020",
-            description: "Full-stack web development for client projects",
-            details: [
-                "Developed responsive web applications using React and Node.js",
-                "Collaborated with UX designers to implement user-friendly interfaces",
-                "Integrated third-party APIs and payment processing systems",
-                "Improved application performance by 25% through code optimization"
-            ]
-        },
-        {
-            id: 3,
-            position: "Junior Developer",
-            company: "StartUp Ventures",
-            date: "2015 - 2017",
-            description: "Front-end development and UI implementation",
-            details: [
-                "Built responsive websites using HTML5, CSS3, and JavaScript",
-                "Worked with design team to implement pixel-perfect layouts",
-                "Assisted in debugging and troubleshooting application issues",
-                "Participated in agile development processes and sprint planning"
+                "Mentored over 50 first- and second-year students in algorithms, data structures, and debugging.",
+                "Provided timely grading and constructive feedback on assignments and exams.",
+                "Assisted students with programming in Java, Python, and C/C++, and guided best practices in Git and IDEs.",
+                "Resolved software, hardware, and networking issues for effective coursework completion.",
+                "Proctored exams to maintain academic integrity and a secure testing environment."
             ]
         }
     ],
     education: [
         {
-            degree: "Bachelor of Science in Computer Science",
-            institution: "University of Technology",
-            date: "2011 - 2015",
-            honors: "Magna Cum Laude"
-        },
-        {
-            degree: "AWS Certified Solutions Architect",
-            institution: "Amazon Web Services",
-            date: "2020",
-            honors: ""
-        }
+        degree: "Bachelor of Science in Computer Science",
+        institution: "University of Manitoba",
+        date: "May 2019 – August 2024",
+        location: "Winnipeg, MB",
+        relevantCourses: [
+            "Data Structures and Algorithms (COMP2140)",
+            "Programming Practices (COMP2160)",
+            "Object-Oriented Programming (COMP2150)",
+            "Distributed Computing (COMP3010)",
+            "Databases Concepts and Usage (COMP3380)"
+        ]
+    }
     ],
     skills: {
         "Programming Languages": ["JavaScript", "Python", "Java", "TypeScript"],
