@@ -276,6 +276,24 @@ body {
     margin-bottom: 8px;
     color: #718096;
 }
+/* Expand/Collapse Animation for Projects */
+.project-features {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.project-item.active .project-features {
+    display: block;
+    max-height: 500px; /* enough space for content */
+    opacity: 1;
+}
+
+.timeline-item, .project-item {
+    cursor: pointer;
+}
 
 /* Skills Styles */
 .skills-container {

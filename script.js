@@ -115,6 +115,7 @@ function initializeResume() {
 
     // Populate projects
     populateProjects();
+    setupProjectInteractions();
     
     // Populate skills
     populateSkills();
@@ -191,6 +192,26 @@ function populateProjects() {
         `;
         
         projectList.appendChild(projectItem);
+    });
+}
+function setupProjectInteractions() {
+    document.addEventListener('click', function(e) {
+        const projectItem = e.target.closest('.project-item');
+        if (projectItem) {
+            const isActive = projectItem.classList.contains('active');
+            
+            // Close all other open projects
+            document.querySelectorAll('.project-item.active').forEach(item => {
+                if (item !== projectItem) item.classList.remove('active');
+            });
+            
+            // Toggle current one
+            if (!isActive) {
+                projectItem.classList.add('active');
+            } else {
+                projectItem.classList.remove('active');
+            }
+        }
     });
 }
 
