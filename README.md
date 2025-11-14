@@ -2,7 +2,7 @@
 
 A modern, responsive **online resume** built using **HTML**, **CSS**, and **JavaScript**, with dynamically rendered resume content stored inside a single structured object in `script.js`.  
 The project is deployed using **AWS S3** and automatically updated through **AWS CodePipeline**.
-https://your-cloudfront-or-s3-website-link.com
+[https://your-cloudfront-or-s3-website-link.com](http://madebysachin.com.s3-website.ca-central-1.amazonaws.com)
 
 ---
 
