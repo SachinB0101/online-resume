@@ -9,9 +9,14 @@ The project is deployed using **AWS S3** and automatically updated through **AWS
 ## 🚀 Features
 
 ### ✅ Dynamic Resume Rendering
-- All resume information lives inside `script.js` in a JSON-style object.
-- Sections (Personal Info, Experience, Projects, Skills, Education) are generated dynamically.
-- Update your resume by editing **only one file**—no need to modify HTML.
+- Resume content is stored in a dedicated **`resumeData.js`** file.
+- `script.js` imports this file and uses it to dynamically render all resume sections.
+- Improves project organization and makes updates easier.
+
+### 🎯 Dynamic Rendering
+- Personal Info, Experience, Projects, Skills, and Education are dynamically generated with JavaScript.
+- Update your resume by editing **only one file—`resumeData.js`**.
+- No changes required in the HTML layout when updating content.
 
 ### 🎨 Fully Responsive & Lightweight
 - Pure **HTML + CSS** (no frameworks required).
